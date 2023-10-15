@@ -22,7 +22,7 @@ while True:
     image=cv.imread(r'C:\Users\HP\Downloads\Week-17-vs\lena.jpg')
     hsv=cv.cvtColor(image,cv.COLOR_BGR2HSV)
     
-    #In the following lines the value from the track
+    #In the following lines the value from the trackq
     #bars are set to the variables of upper and lower 
     #limits of the various features
     l_h=cv.getTrackbarPos('LH','tracking')
