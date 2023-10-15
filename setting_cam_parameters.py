@@ -10,8 +10,8 @@ while(True):#capture the frames
     # if not ret:
     #     print("Error: Could not read a frame.")
     #     break
-    cap.set(3,640)
-    cap.set(4,480)
+    cap.set(3,6400)
+    cap.set(4,4800)
     print(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     print(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     # out.write(frame)
