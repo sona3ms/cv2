@@ -1,8 +1,8 @@
 import cv2
 
 # Load the Haar Cascade Classifier for face detection
-#face_cascade = cv2.CascadeClassifier(r'C:\Users\HP\Downloads\Week-17-vs\face_project\haarcascade_frontalface_default.xml')
-face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier(r'C:\Users\HP\Downloads\Week-17-vs\face_project\haarcascade_frontalface_default.xml')
+# face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 cap = cv2.VideoCapture(0)  # 0 for default camera (you can change it if you have multiple cameras)
 while True:

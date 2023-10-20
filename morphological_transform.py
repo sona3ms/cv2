@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-img = cv2.imread('j.png')#already B&W image
+img = cv2.imread('j_morph.png')#already B&W image
 
 kernal = np.ones((5,5),np.uint8)
 

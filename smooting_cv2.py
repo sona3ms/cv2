@@ -7,8 +7,8 @@ img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 kernel = np.ones((5,5),np.float32)/25
 #homogenious
-dst = cv2.filter2D(img,-1,kernel)
-blur_ = cv2.blur(img,(15,15))
+dst = cv2.filter2D(img,-1,kernel)#2D convolution
+blur_ = cv2.blur(img,(15,15))#blurring (averaging) 
 Gaussian_ = cv2.GaussianBlur(img,(15,15),0)
 median_ = cv2.medianBlur(img,15)
 bilateral=cv2.bilateralFilter(img,9,75,75)
