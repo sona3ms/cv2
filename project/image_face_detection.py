@@ -18,8 +18,8 @@ def draw_objects(image, objects):
         cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 3)
 
 # Image detection
-image_path = r'C:\Users\HP\Downloads\Week-17-vs\project\test4.jpg' 
-#image_path = r'C:\Users\HP\Downloads\Week-17-vs\project\1691148460920.jpeg'
+#image_path = r'C:\Users\HP\Downloads\Week-17-vs\project\img1.jpg' 
+image_path = r'C:\Users\HP\Downloads\Week-17-vs\project\test4.jpg'
 image = cv2.imread(image_path)
 if image is not None:
     detected_objects = detect_objects(image)

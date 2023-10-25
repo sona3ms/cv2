@@ -1,24 +1,34 @@
+# import cv2
+# import matplotlib.pyplot as plt
+# import datetime
 import cv2
-import matplotlib.pyplot as plt
-img=cv2.imread(r'C:\Users\HP\Downloads\Week-17-vs\lena.jpg',0)
-# img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-line_ = cv2.line(img,(50,50),(400,100),(255,255,255),2)
-cv2.imshow('image',line_)
-# plt.imshow(img)
-# plt.show()
+import numpy as np
+
+# Read an image
+image = cv2.imread(r"C:\Users\HP\Downloads\Week-17-vs\lena.jpg")
+
+# Define the shearing parameters (shearing in the x-axis)
+shear_factor = 0.5  # Adjust the value as needed
+rows, cols, _ = image.shape
+
+# Define the shear matrix
+shear_matrix = np.array([[1, shear_factor, 0],[0, 1, 0]], dtype=np.float32)
+
+# Apply the shear transformation
+sheared_image = cv2.warpAffine(image, shear_matrix, (cols, rows))
+
+# Display the original and sheared images
+cv2.imshow('Original Image', image)
+cv2.imshow('Sheared Image', sheared_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-# import cv2
 
-# # Read the image in grayscale
-# img = cv2.imread(r'C:\Users\HP\Downloads\Week-17-vs\lena.jpg', 0)
 
-# # Draw a white line on the image
-# line_img = cv2.line(img, (50, 50), (400, 100), (255, 255, 255), 2)
+# font = cv2.FONT_HERSHEY_SIMPLEX
+# date_ = str(datetime.datetime.now())
+# img = cv2.putText(img,date_,(10,500),font,1,(0,0,0),1)
+# cv2.imshow('img',img)
 
-# # Display the image
-# cv2.imshow('image', line_img)
 
-# # Wait for a key event and then close the window
 # cv2.waitKey(0)
 # cv2.destroyAllWindows()
